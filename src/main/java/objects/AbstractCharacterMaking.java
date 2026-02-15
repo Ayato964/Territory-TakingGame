@@ -6,7 +6,7 @@ import utils.Scale2D;
 import java.awt.*;
 import java.awt.image.BufferedImage;
 
-public abstract class AbstractCharacterMaking extends ToonObjects {
+public abstract class AbstractCharacterMaking extends ToonObject {
 
     private final BufferedImage character;
 

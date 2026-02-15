@@ -8,6 +8,8 @@ public class CharacterFactory {
 
     public static final RegistoryObject<AbstractCharacterMaking> TEST_OBJECT = CHARA_LIST.create("test", TestObject::new);
 
+    public static final RegistoryObject<AbstractCharacterMaking> TERRITORY_BLOCK = CHARA_LIST.create("territory", Territory::new);
+
 
 
 }

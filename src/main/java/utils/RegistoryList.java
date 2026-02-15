@@ -1,18 +1,18 @@
 package utils;
 
-import objects.ToonObjects;
+import objects.ToonObject;
 
 import java.util.HashMap;
 
-public class RegistoryList<T extends ToonObjects> extends HashMap<String, RegistoryObject<T>> {
+public class RegistoryList<T extends ToonObject> extends HashMap<String, RegistoryObject<T>> {
 
     public RegistoryList(){}
 
-    public T get(Object o, int x, int y, int w, int h) {
+    public T get(String o, int x, int y, int w, int h) {
         RegistoryObject<T> reg = super.get(o);
         return reg.get(x, y, w, h);
     }
-    public T get(Object o, Position2D position2D, Scale2D scale2D) {
+    public T get(String o, Position2D position2D, Scale2D scale2D) {
         RegistoryObject<T> reg = super.get(o);
         return reg.get(position2D, scale2D);
     }

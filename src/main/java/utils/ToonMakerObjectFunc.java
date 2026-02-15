@@ -1,8 +1,8 @@
 package utils;
 
-import objects.ToonObjects;
+import objects.ToonObject;
 
-public interface ToonMakerObjectFunc<T extends ToonObjects> {
+public interface ToonMakerObjectFunc<T extends ToonObject> {
 
 
     public T create(Position2D position, Scale2D scale);

@@ -1,9 +1,9 @@
 package utils;
 
 
-import objects.ToonObjects;
+import objects.ToonObject;
 
-public class RegistoryObject<T extends ToonObjects>{
+public class RegistoryObject<T extends ToonObject>{
 
     private final ToonMakerObjectFunc<T> t;
 
@@ -15,7 +15,7 @@ public class RegistoryObject<T extends ToonObjects>{
         return get(new Position2D(x, y), new Scale2D(w, h));
     }
 
-    public T get(Position2D position, Scale2D scale){
+    public T get(Position2D position, Scale2D scale) {
         return t.create(position, scale);
     }
 }
