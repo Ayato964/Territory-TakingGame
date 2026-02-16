@@ -31,6 +31,12 @@ public class ColliderMaster implements Runnable{
                 if(!objects.isEmpty())
                     c.inObject(objects);
             }
+
+            try {
+                Thread.sleep(10);
+            } catch (InterruptedException e) {
+                throw new RuntimeException(e);
+            }
         }
     }
 
@@ -38,7 +44,7 @@ public class ColliderMaster implements Runnable{
         ArrayList<ToonObject> objects = new ArrayList<>();
         for(Collider col: colliders){
             ToonObject tgt = col.get();
-            if(!tgt.getClass().isInstance(src)){
+            if(!tgt.equals(src)){
                 Rectangle2D srcRect = new Rectangle2D.Double(src.position.getX(), src.position.getY(), src.scale.getW(), src.scale.getH());
                 Rectangle2D tgtRect = new Rectangle2D.Double(tgt.position.getX(), tgt.position.getY(), tgt.scale.getW(),tgt.scale.getH());
                 if(srcRect.intersects(tgtRect))

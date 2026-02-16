@@ -13,8 +13,8 @@ public class GameScene implements MainSceneDraw {
     private final ToonArrayList<ToonObject> objects = new ToonArrayList<>(this::isAddArray);
 
     public GameScene(){
-        objects.add(CharacterFactory.TERRITORY_BLOCK.get(10, 10, 10, 10));
-        objects.add(CharacterFactory.TERRITORY_BLOCK.get(50, 10, 10, 10));
+        objects.add(CharacterFactory.TERRITORY_BLOCK.get(0, 120, 50, 50));
+        objects.add(CharacterFactory.TERRITORY_BLOCK.get(500, 100, 100, 100));
     }
 
 

@@ -17,7 +17,7 @@ public abstract class AbstractCharacterMaking extends ToonObject {
     public AbstractCharacterMaking(Position2D position2D, Scale2D scale2D){
         super(position2D, scale2D);
 
-        character = new BufferedImage(scale.getW(), scale.getH(), BufferedImage.TYPE_INT_RGB);
+        character = new BufferedImage((int)scale.getW(),(int) scale.getH(), BufferedImage.TYPE_INT_RGB);
         Graphics2D chara_g = this.character.createGraphics();
         int center_x = this.character.getWidth() / 2;
         int center_y = this.character.getHeight() / 2;
@@ -27,7 +27,7 @@ public abstract class AbstractCharacterMaking extends ToonObject {
 
     @Override
     public final void draw(Graphics2D g2d) {
-        g2d.drawImage(character, position.getX(), position.getY(), null);
+        g2d.drawImage(character, (int) position.getX(),(int) position.getY(), null);
     }
 
     protected abstract void createCharacter(Graphics2D g2d, int center_x, int center_y);

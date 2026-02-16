@@ -3,8 +3,8 @@ package utils;
 import system.Config;
 
 public class Scale2D{
-    private final int initW, initH;
-    private int w, h;
+    private final float initW, initH;
+    private float w, h;
 
     public Scale2D(int initW, int initH) {
         if(initW >= Config.getINSTANCE().maxScreenCol)
@@ -18,19 +18,19 @@ public class Scale2D{
         h = initH;
     }
 
-    public int getInitH() {
+    public float getInitH() {
         return initH;
     }
 
-    public int getInitW() {
+    public float getInitW() {
         return initW;
     }
 
-    public int getW() {
+    public float getW() {
         return w * Config.getINSTANCE().tileSize;
     }
 
-    public int getH() {
+    public float getH() {
         return h * Config.getINSTANCE().tileSize;
     }
 }

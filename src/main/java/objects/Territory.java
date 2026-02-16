@@ -23,7 +23,8 @@ public class Territory extends AbstractCharacterMaking implements RectCollider{
 
     @Override
     public void inObject(ArrayList<ToonObject> targets) {
-        System.out.println("TARGET:::" + targets.getFirst());
+        System.out.println("Conflict :" + targets.getFirst());
+
     }
 
     @Override

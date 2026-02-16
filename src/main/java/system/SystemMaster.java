@@ -22,7 +22,7 @@ public class SystemMaster implements Runnable{
                 t.tick();
 
             try {
-                Thread.sleep(100);
+                Thread.sleep(10);
             } catch (InterruptedException e) {
                 throw new RuntimeException(e);
             }

@@ -6,8 +6,8 @@ import javax.naming.directory.AttributeInUseException;
 import javax.print.AttributeException;
 
 public class Position2D{
-    private final int init_x, init_y;
-    private int x, y;
+    private final float init_x, init_y;
+    private float x, y;
     public Position2D(int x, int y) {
         if(x >= Config.getINSTANCE().maxScreenCol)
             throw new IllegalArgumentException("x is up to a maximum of " + Config.getINSTANCE().maxScreenCol + ".");
@@ -20,19 +20,19 @@ public class Position2D{
         init_y = y;
     }
 
-    public int getInitX() {
+    public float getInitX() {
         return init_x;
     }
 
-    public int getInitY() {
+    public float getInitY() {
         return init_y;
     }
 
-    public int getX() {
+    public float getX() {
         return x * Config.getINSTANCE().tileSize;
     }
 
-    public int getY() {
+    public float getY() {
         return y * Config.getINSTANCE().tileSize;
     }
 
@@ -53,8 +53,8 @@ public class Position2D{
     }
 
     public void add(Position2D position){
-        int bx = getX() + position.getX();
-        int by = getY() + position.getY();
+        float bx = getX() + position.getX();
+        float by = getY() + position.getY();
         x = bx / Config.getINSTANCE().tileSize;
         y = by / Config.getINSTANCE().tileSize;
 
