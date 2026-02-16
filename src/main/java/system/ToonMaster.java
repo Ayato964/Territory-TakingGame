@@ -5,8 +5,8 @@ public class ToonMaster implements Runnable{
     public final SystemMaster TICK_MASTER = SystemMaster.getMASTER();
     public final WindowFrame MAIN_WINDOW;
     private boolean IS_RUNNING = true;
-    public ToonMaster(MainSceneDraw firstScene){
-        MAIN_WINDOW = new WindowFrame(firstScene);
+    public ToonMaster(){
+        MAIN_WINDOW = new WindowFrame();
         Thread thread = new Thread(this);
         thread.start();
     }

@@ -59,4 +59,9 @@ public class Position2D{
         y = by / Config.getINSTANCE().tileSize;
 
     }
+
+    @Override
+    public String toString() {
+        return "x:" + getX() + "  y:" + getY();
+    }
 }

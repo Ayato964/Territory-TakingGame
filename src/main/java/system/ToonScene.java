@@ -9,12 +9,10 @@ import java.awt.Graphics2D;
 public class ToonScene extends JPanel {
 
     public MainSceneDraw dr;
-    public ToonScene(MainSceneDraw d) {
+    public ToonScene() {
         this.setPreferredSize(new Dimension(Config.getINSTANCE().screenWidth, Config.getINSTANCE().screenHeight));
         this.setBackground(Color.black);
         this.setDoubleBuffered(true);
-        dr = d;
-        SystemMaster.getMASTER().ticks.add(d);
     }
 
     public void setScene(MainSceneDraw d){

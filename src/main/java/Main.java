@@ -8,6 +8,8 @@ public class Main {
 
     }
     public static void main(String[] args) {
-        MASTER = new ToonMaster(new GameScene());
+        MASTER = new ToonMaster();
+        MASTER.MAIN_WINDOW.sceneMaster.setScene(new GameScene(MASTER.MAIN_WINDOW.sceneMaster));
+        MASTER.MAIN_WINDOW.setVisible(true);
     }
 }

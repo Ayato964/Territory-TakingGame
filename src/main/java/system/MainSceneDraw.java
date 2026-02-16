@@ -6,10 +6,15 @@ import utils.tools.RectCollider;
 
 import java.awt.*;
 
-public interface MainSceneDraw extends Tick {
-    public void draw(Graphics2D g);
+public abstract class MainSceneDraw implements Tick {
+    protected final ToonScene scene;
+    public MainSceneDraw(ToonScene scene){
+        this.scene = scene;
+    }
 
-    public default <T> void isAddArray(T r){
+    public abstract void draw(Graphics2D g);
+
+    public <T> void isAddArray(T r){
         if(r instanceof RectCollider)
             ColliderMaster.getMASTER().colliders.add((Collider) r);
 

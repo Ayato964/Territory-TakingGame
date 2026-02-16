@@ -18,6 +18,10 @@ public abstract class AbstractCharacterMaking extends ToonObject {
         super(position2D, scale2D);
 
         character = new BufferedImage((int)scale.getW(),(int) scale.getH(), BufferedImage.TYPE_INT_RGB);
+        updateCharacter();
+    }
+
+    public void updateCharacter(){
         Graphics2D chara_g = this.character.createGraphics();
         int center_x = this.character.getWidth() / 2;
         int center_y = this.character.getHeight() / 2;

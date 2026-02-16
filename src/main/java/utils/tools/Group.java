@@ -7,5 +7,4 @@ public interface Group{
 
     public void setGroupID(int groupID);
 
-    public void getGROUP();
 }

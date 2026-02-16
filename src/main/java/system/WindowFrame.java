@@ -7,17 +7,21 @@ import javax.swing.JFrame;
 public class WindowFrame {
     public final JFrame window;
     public final ToonScene sceneMaster;
-    public WindowFrame(MainSceneDraw scene){
+    public WindowFrame(){
         window = new JFrame();
         window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         window.setResizable(false);
         window.setTitle("Territory Taking Game");
 
-        sceneMaster = new ToonScene(scene);
+        sceneMaster = new ToonScene();
         window.add(sceneMaster);
         window.pack();
         window.setLocationRelativeTo(null);
-        window.setVisible(true);
+    }
+
+    public void setVisible(boolean b){
+        window.repaint();
+        window.setVisible(b);
     }
 
 }
